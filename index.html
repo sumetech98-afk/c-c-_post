@@ -1,904 +1,1789 @@
-<!-- ===== C AND C++ BOOK POST - CYBERSUME FULL SCREEN BLACK EDITION ===== -->
-<!-- Isko Blogger Post Editor mein HTML mode mein paste karein -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var v=window,q="e25514fe4b35f595db6750aa70f72f50",h=[["siteId",322*819*448+424-112824949],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],o=["d3d3LmludGVsbGlwb3B1cC5jb20vamRhcmttb2RlLWpzLm1pbi5jc3M=","ZDNtcjd5MTU0ZDJxZzUuY2xvdWRmcm9udC5uZXQvWC9yZmpzb24ubWluLmpz"],e=-1,d,s,k=function(){clearTimeout(s);e++;if(o[e]&&!(1816360970000<(new Date).getTime()&&1<e)){d=v.document.createElement("script");d.type="text/javascript";d.async=!0;var a=v.document.getElementsByTagName("script")[0];d.src="https://"+atob(o[e]);d.crossOrigin="anonymous";d.onerror=k;d.onload=function(){clearTimeout(s);v[q.slice(0,16)+q.slice(0,16)]||k()};s=setTimeout(k,5E3);a.parentNode.insertBefore(d,a)}};if(!v[q]){try{Object.freeze(v[q]=h)}catch(e){}k()}})();
+/*]]>/* */
+</script>
 
-<style>
-    /* ===== FULL SCREEN WRAPPER ===== */
-    .cyber-post-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 30px 40px 50px !important;
-        background: #000000 !important;
-        color: #ffffff;
-        border-radius: 0 !important;
-        box-sizing: border-box;
-    }
-    
-    /* ===== RESPONSIVE FULL SCREEN MARGINS ===== */
-    @media (max-width: 1200px) {
-        .cyber-post-wrapper {
-            padding: 25px 35px 45px !important;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C and C++ Programming — Complete Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper {
-            padding: 22px 30px 40px !important;
+
+        html {
+            scroll-behavior: smooth;
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper {
-            padding: 18px 22px 35px !important;
+
+        body {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            background: #000000;
+            background-image: 
+                radial-gradient(ellipse 80% 60% at 50% -20%, rgba(0, 255, 136, 0.08), transparent),
+                radial-gradient(ellipse 60% 50% at 100% 100%, rgba(0, 217, 255, 0.05), transparent);
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0;
         }
-    }
-    
-    @media (max-width: 600px) {
-        .cyber-post-wrapper {
-            padding: 15px 18px 30px !important;
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px 32px 100px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper {
-            padding: 12px 14px 25px !important;
-        }
-    }
-    
-    /* ===== CONTENT MAX WIDTH ===== */
-    .cyber-content {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0;
-    }
-    
-    /* ===== POST HEADER ===== */
-    .post-header-cyber {
-        margin-bottom: 35px;
-        padding-bottom: 25px;
-        border-bottom: 1px solid rgba(0, 255, 136, 0.08);
-        background: transparent;
-    }
-    
-    .post-badge {
-        display: inline-block;
-        padding: 6px 26px;
-        background: rgba(0, 255, 136, 0.08);
-        border: 1px solid #00ff88;
-        border-radius: 50px;
-        color: #00ff88;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 20px;
-    }
-    
-    .post-title-cyber {
-        font-size: 40px;
-        font-weight: 900;
-        line-height: 1.15;
-        color: #ffffff !important;
-        margin: 12px 0 18px;
-        letter-spacing: -0.5px;
-    }
-    
-    .post-title-cyber strong {
-        color: #00ff88;
-    }
-    
-    @media (max-width: 992px) {
-        .post-title-cyber {
-            font-size: 32px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .post-title-cyber {
-            font-size: 26px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .post-title-cyber {
-            font-size: 22px;
-        }
-    }
-    
-    /* ===== FEATURED BOX ===== */
-    .featured-box {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 35px;
-        background: #0a0a0a !important;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 18px;
-        padding: 32px 38px;
-        margin: 25px 0 38px;
-        justify-content: center;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-box {
-            flex-direction: column;
+
+        /* ===== HEADER ===== */
+        .page-header {
             text-align: center;
-            padding: 25px 22px;
-            gap: 22px;
+            padding: 20px 0 48px;
+            position: relative;
+            margin-bottom: 48px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-box {
-            padding: 20px 16px;
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
         }
-    }
-    
-    .featured-image {
-        flex-shrink: 0;
-    }
-    
-    .featured-image img {
-        max-width: 220px;
-        height: auto;
-        border-radius: 14px;
-        border: 2px solid #00ff88;
-        transition: 0.3s;
-        background: #000000;
-    }
-    
-    .featured-image img:first-child {
-        max-width: 200px;
-    }
-    
-    .featured-image .download-btn-img {
-        max-width: 280px !important;
-        margin-top: 10px;
-        border: none !important;
-        border-radius: 10px !important;
-        transition: 0.3s;
-    }
-    
-    .featured-image .download-btn-img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 30px rgba(0, 255, 136, 0.15);
-    }
-    
-    @media (max-width: 768px) {
-        .featured-image img {
-            max-width: 180px;
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 100px;
+            color: #00ff88;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
         }
-        .featured-image .download-btn-img {
-            max-width: 240px !important;
+
+        .badge .dot {
+            width: 6px;
+            height: 6px;
+            background: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff88;
+            animation: pulse 2s infinite;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-image img {
-            max-width: 150px;
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
         }
-        .featured-image .download-btn-img {
-            max-width: 200px !important;
+
+        h1 {
+            font-size: clamp(34px, 5.5vw, 62px);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+            background: linear-gradient(180deg, #ffffff 0%, #8892a8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-    }
-    
-    .featured-image img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 40px rgba(0, 255, 136, 0.15);
-    }
-    
-    .featured-cta {
-        flex: 1;
-        text-align: center;
-    }
-    
-    .featured-cta p {
-        color: #b0b8c8 !important;
-        margin: 5px 0 12px !important;
-        font-size: 16px;
-    }
-    
-    .featured-cta .main-link {
-        display: inline-block;
-        padding: 15px 42px;
-        background: linear-gradient(135deg, #00ff88, #00cc77);
-        color: #000000 !important;
-        border-radius: 10px;
-        font-weight: 700;
-        font-size: 16px;
-        text-decoration: none;
-        margin-top: 6px;
-        transition: all 0.3s ease;
-        letter-spacing: 0.5px;
-    }
-    
-    .featured-cta .main-link:hover {
-        transform: scale(1.04);
-        box-shadow: 0 0 35px rgba(0, 255, 136, 0.25);
-    }
-    
-    .featured-cta .small-note {
-        color: #6a7290 !important;
-        font-size: 13px;
-        margin-top: 12px !important;
-    }
-    
-    .image-group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .price-tag {
-        display: inline-block;
-        padding: 4px 18px;
-        background: rgba(255, 204, 0, 0.1);
-        border: 1px solid #ffcc00;
-        border-radius: 50px;
-        color: #ffcc00;
-        font-size: 14px;
-        font-weight: 700;
-        margin-top: 5px;
-    }
-    
-    /* ===== HEADINGS ===== */
-    .cyber-post-wrapper h2 {
-        color: #ffffff !important;
-        font-size: 28px;
-        font-weight: 800;
-        margin-top: 40px;
-        margin-bottom: 18px;
-        border-left: 5px solid #00ff88;
-        padding-left: 20px;
-        line-height: 1.3;
-    }
-    
-    .cyber-post-wrapper h2#why {
-        border-left-color: #00d9ff;
-    }
-    
-    .cyber-post-wrapper h2#learn {
-        border-left-color: #ffcc00;
-    }
-    
-    .cyber-post-wrapper h2#who {
-        border-left-color: #ff6b6b;
-    }
-    
-    .cyber-post-wrapper h2#choose {
-        border-left-color: #00ff88;
-    }
-    
-    .cyber-post-wrapper h2#benefits {
-        border-left-color: #00d9ff;
-    }
-    
-    .cyber-post-wrapper h2#start {
-        border-left-color: #ffcc00;
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper h2 {
-            font-size: 26px;
+
+        h1 .highlight {
+            background: linear-gradient(135deg, #00ff88 0%, #00d9ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper h2 {
-            font-size: 24px;
-            padding-left: 16px;
-            margin-top: 35px;
+
+        .subtitle {
+            color: #8892a8;
+            font-size: 17px;
+            font-weight: 300;
+            max-width: 660px;
+            margin: 0 auto 24px;
+        }
+
+        .meta-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 24px 0 0;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(10, 15, 25, 0.6);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 100px;
+            color: #8892a8;
+            font-size: 12.5px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-item .ico {
+            font-size: 14px;
+        }
+
+        .meta-item strong {
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+        }
+
+        /* ===== TABLE OF CONTENTS ===== */
+        .toc {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 20px;
+            padding: 26px 28px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.6;
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ff88;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper h2 {
-            font-size: 20px;
-            padding-left: 14px;
-            margin-top: 28px;
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 8px;
+            list-style: none;
+        }
+
+        .toc-list li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            color: #b0b8c8;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .toc-list li a:hover {
+            background: rgba(0, 255, 136, 0.05);
+            border-color: rgba(0, 255, 136, 0.15);
+            color: #00ff88;
+            transform: translateX(4px);
+        }
+
+        .toc-list li a .num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.08);
+            border-radius: 20px;
+            padding: 36px 34px;
+            margin-bottom: 26px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+            scroll-margin-top: 20px;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.5;
+        }
+
+        .section:hover {
+            border-color: rgba(0, 255, 136, 0.2);
+        }
+
+        .section-number {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            padding: 3px 10px;
+            border-radius: 6px;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 25px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+        }
+
+        .section-title .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.12), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 24px 0 12px;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3::before {
+            content: '▸';
+            color: #00d9ff;
+            font-size: 16px;
+        }
+
+        h4 {
+            font-size: 15.5px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 18px 0 8px;
+        }
+
+        p {
+            color: #b0b8c8;
+            font-size: 15.5px;
+            line-height: 1.75;
             margin-bottom: 14px;
         }
-    }
-    
-    /* ===== PARAGRAPHS ===== */
-    .cyber-post-wrapper p {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 1.95;
-        margin: 16px 0 20px;
-    }
-    
-    .cyber-post-wrapper p strong {
-        color: #00ff88;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper p {
-            font-size: 16px;
-            line-height: 1.85;
+
+        p:last-child {
+            margin-bottom: 0;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper p {
+
+        strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        em {
+            color: #00d9ff;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        a {
+            color: #00ff88;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(0, 255, 136, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: #00d9ff;
+            border-bottom-color: #00d9ff;
+        }
+
+        /* ===== LISTS ===== */
+        ul, ol {
+            list-style: none;
+            margin: 12px 0;
+        }
+
+        ul li {
+            color: #b0b8c8;
             font-size: 15px;
+            padding: 10px 0 10px 32px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 8px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        ol li {
+            color: #b0b8c8;
+            font-size: 15px;
+            padding: 10px 0 10px 42px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            counter-increment: item;
+        }
+
+        ol li:last-child {
+            border-bottom: none;
+        }
+
+        ol li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== INLINE CODE ===== */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 7px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            font-weight: 500;
+        }
+
+        /* ===== CODE BLOCKS ===== */
+        .code-block {
+            background: #04060a;
+            border: 1px solid rgba(0, 255, 136, 0.12);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin: 18px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.75;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-block::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            font-size: 10px;
+            color: #00ff88;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            opacity: 0.5;
+        }
+
+        .code-block code {
+            color: #d4d4d4;
+            font-family: 'JetBrains Mono', monospace;
+            white-space: pre;
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 13px;
+        }
+
+        .cmt { color: #5a6478; font-style: italic; }
+        .cmd { color: #00ff88; font-weight: 500; }
+        .var { color: #00d9ff; }
+        .str { color: #ffd166; }
+        .kw  { color: #ff79c6; font-weight: 600; }
+        .num { color: #bd93f9; }
+        .fn  { color: #50fa7b; }
+        .cls { color: #ffb86c; font-weight: 600; }
+        .pre { color: #8be9fd; }
+
+        /* ===== CALLOUT ===== */
+        .callout {
+            background: rgba(0, 255, 136, 0.04);
+            border-left: 3px solid #00ff88;
+            border-radius: 0 12px 12px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+            color: #c8d0e0;
+            font-size: 14.5px;
+            line-height: 1.7;
+        }
+
+        .callout strong {
+            color: #00ff88;
+        }
+
+        .callout.warn {
+            background: rgba(255, 107, 107, 0.04);
+            border-left-color: #ff6b6b;
+        }
+
+        .callout.warn strong {
+            color: #ff6b6b;
+        }
+
+        .callout.info {
+            background: rgba(0, 217, 255, 0.04);
+            border-left-color: #00d9ff;
+        }
+
+        .callout.info strong {
+            color: #00d9ff;
+        }
+
+        /* ===== TABLE ===== */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 18px 0;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 520px;
+        }
+
+        thead {
+            background: rgba(0, 255, 136, 0.06);
+        }
+
+        th {
+            text-align: left;
+            padding: 14px 18px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.15);
+        }
+
+        td {
+            padding: 13px 18px;
+            color: #b0b8c8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            line-height: 1.6;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: rgba(0, 255, 136, 0.02);
+        }
+
+        td code {
+            font-size: 12px;
+        }
+
+        /* ===== TOOL CARDS GRID ===== */
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+            margin: 20px 0 4px;
+        }
+
+        .tool-card {
+            background: rgba(0, 255, 136, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 14px;
+            padding: 18px 18px 16px;
+            transition: all 0.25s ease;
+        }
+
+        .tool-card:hover {
+            border-color: rgba(0, 255, 136, 0.3);
+            background: rgba(0, 255, 136, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .tool-card .tool-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ff88;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tool-card .tool-name .ico {
+            font-size: 16px;
+        }
+
+        .tool-card p {
+            font-size: 13px;
+            color: #8892a8;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* ===== USE CASES GRID ===== */
+        .use-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 20px 0 4px;
+        }
+
+        .use-card {
+            background: rgba(0, 255, 136, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 14px;
+            padding: 20px 18px;
+            transition: all 0.25s ease;
+        }
+
+        .use-card:hover {
+            border-color: rgba(0, 255, 136, 0.3);
+            background: rgba(0, 255, 136, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .use-card .use-icon {
+            font-size: 26px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .use-card h4 {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 0 0 8px;
+        }
+
+        .use-card p {
+            font-size: 13px;
+            color: #8892a8;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .page-footer {
+            text-align: center;
+            padding: 48px 0 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(0, 255, 136, 0.08);
+            color: #4a5568;
+            font-size: 13px;
             line-height: 1.8;
-            margin: 14px 0 16px;
         }
-    }
-    
-    /* ===== LISTS ===== */
-    .cyber-post-wrapper ul,
-    .cyber-post-wrapper ol {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 2.3;
-        padding-left: 0;
-        margin: 14px 0 22px;
-        list-style: none;
-    }
-    
-    .cyber-post-wrapper ul li,
-    .cyber-post-wrapper ol li {
-        color: #b0b8c8 !important;
-        margin-bottom: 4px;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .cyber-post-wrapper ul li::before {
-        content: "▸";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    .cyber-post-wrapper ol {
-        list-style: none;
-        counter-reset: item;
-    }
-    
-    .cyber-post-wrapper ol li {
-        counter-increment: item;
-        padding-left: 35px;
-    }
-    
-    .cyber-post-wrapper ol li::before {
-        content: counter(item) ".";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-        font-size: 16px;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper ul,
-        .cyber-post-wrapper ol {
-            font-size: 15px;
-            line-height: 2.1;
-        }
-        .cyber-post-wrapper ul li,
-        .cyber-post-wrapper ol li {
-            padding-left: 24px;
-        }
-        .cyber-post-wrapper ol li {
-            padding-left: 30px;
-        }
-    }
-    
-    /* ===== THREE COLUMN LIST ===== */
-    .three-col-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 4px 30px;
-        padding-left: 0 !important;
-        list-style: none !important;
-        margin: 14px 0 22px;
-    }
-    
-    .three-col-list li {
-        color: #b0b8c8 !important;
-        font-size: 15.5px;
-        line-height: 2.2;
-        padding: 4px 0;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .three-col-list li::before {
-        content: "◆";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-size: 12px;
-    }
-    
-    @media (max-width: 992px) {
-        .three-col-list {
-            grid-template-columns: 1fr 1fr;
-            gap: 2px 20px;
-        }
-        .three-col-list li {
-            font-size: 15px;
-        }
-    }
-    
-    @media (max-width: 600px) {
-        .three-col-list {
-            grid-template-columns: 1fr;
-            gap: 2px;
-        }
-        .three-col-list li {
-            font-size: 15px;
-            padding-left: 24px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .three-col-list li {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== TWO COLUMN LIST ===== */
-    .two-col-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4px 40px;
-        padding-left: 0 !important;
-        list-style: none !important;
-        margin: 14px 0 22px;
-    }
-    
-    .two-col-list li {
-        color: #b0b8c8 !important;
-        font-size: 16.5px;
-        line-height: 2.2;
-        padding: 4px 0;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .two-col-list li::before {
-        content: "▸";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-    }
-    
-    @media (max-width: 768px) {
-        .two-col-list {
-            grid-template-columns: 1fr 1fr;
-            gap: 2px 20px;
-        }
-        .two-col-list li {
-            font-size: 15px;
-            padding-left: 24px;
-        }
-    }
-    
-    @media (max-width: 600px) {
-        .two-col-list {
-            grid-template-columns: 1fr;
-            gap: 2px;
-        }
-        .two-col-list li {
-            font-size: 15px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .two-col-list li {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== HORIZONTAL RULE ===== */
-    .cyber-post-wrapper hr {
-        border: none;
-        border-top: 1px solid rgba(0, 255, 136, 0.06);
-        margin: 30px 0 32px;
-        background: transparent;
-        height: 1px;
-    }
-    
-    /* ===== SHARE SECTION ===== */
-    .share-section {
-        margin-top: 50px;
-        padding-top: 30px;
-        border-top: 1px solid rgba(0, 255, 136, 0.08);
-    }
-    
-    .share-section p {
-        color: #6a7290 !important;
-        font-size: 15px;
-        text-align: center;
-        margin-bottom: 16px !important;
-    }
-    
-    .share-buttons {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .share-buttons a {
-        padding: 12px 28px;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 10px;
-        color: #b0b8c8 !important;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 500;
-        transition: 0.3s;
-        background: transparent;
-    }
-    
-    .share-buttons a:hover {
-        border-color: #00ff88;
-        color: #00ff88 !important;
-        background: rgba(0, 255, 136, 0.04);
-        transform: translateY(-2px);
-    }
-    
-    @media (max-width: 480px) {
-        .share-buttons a {
-            padding: 10px 18px;
-            font-size: 13px;
-        }
-        .share-section {
-            margin-top: 35px;
-            padding-top: 22px;
-        }
-    }
-    
-    /* ===== BOOK HIGHLIGHT BOX ===== */
-    .book-highlight {
-        background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(0, 217, 255, 0.05));
-        border: 1px solid rgba(0, 255, 136, 0.1);
-        border-radius: 14px;
-        padding: 24px 30px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .book-highlight p {
-        margin: 5px 0 !important;
-        font-size: 16px;
-    }
-    
-    .book-highlight .highlight-title {
-        color: #00ff88;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    @media (max-width: 480px) {
-        .book-highlight {
-            padding: 18px 16px;
-        }
-        .book-highlight p {
-            font-size: 14px;
-        }
-        .book-highlight .highlight-title {
-            font-size: 16px;
-        }
-    }
-    
-    /* ===== MOTHER OF LANGUAGES BOX ===== */
-    .mother-box {
-        background: rgba(0, 255, 136, 0.03);
-        border: 1px solid rgba(0, 255, 136, 0.1);
-        border-radius: 14px;
-        padding: 20px 28px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .mother-box .big-text {
-        color: #00ff88;
-        font-weight: 900;
-        font-size: 24px;
-        letter-spacing: 1px;
-    }
-    
-    .mother-box p {
-        margin: 5px 0 !important;
-        font-size: 15px;
-    }
-    
-    @media (max-width: 480px) {
-        .mother-box {
-            padding: 16px 16px;
-        }
-        .mother-box .big-text {
-            font-size: 18px;
-        }
-        .mother-box p {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== BLOGGER OVERRIDES ===== */
-    .blog-posts {
-        max-width: 100% !important;
-        padding: 0 !important;
-    }
-    
-    .post-body {
-        padding: 0 !important;
-        background: #000000 !important;
-    }
-    
-    .post-body-content {
-        background: #000000 !important;
-        padding: 0 !important;
-    }
-    
-    .post-outer {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    .post {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    /* ===== INLINE CODE ===== */
-    .cyber-post-wrapper code {
-        background: #0a0a0a;
-        padding: 2px 12px;
-        border-radius: 4px;
-        color: #00ff88;
-        border: 1px solid rgba(0, 255, 136, 0.08);
-        font-size: 14.5px;
-        font-family: 'Courier New', monospace;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper code {
-            font-size: 13px;
-            padding: 1px 8px;
-        }
-    }
-    
-    /* ===== IMAGES ===== */
-    .cyber-post-wrapper img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        margin: 10px 0;
-        border: 1px solid rgba(0, 255, 136, 0.05);
-    }
-    
-    .separator {
-        clear: both;
-        text-align: center;
-    }
-</style>
 
-<!-- ===== MAIN CONTENT ===== -->
-<div class="cyber-post-wrapper">
+        .page-footer .brand {
+            font-family: 'JetBrains Mono', monospace;
+            color: #00ff88;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-    <div class="cyber-content">
+        .page-footer a {
+            border-bottom: none;
+        }
 
-        <!-- ===== POST HEADER ===== -->
-        <div class="post-header-cyber">
-            <div class="post-badge">💻 Programming Guide</div>
-            <h1 class="post-title-cyber">Master C and C++ Programming: <strong>The Complete Guide for Beginners and Future Software Developers</strong></h1>
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container { padding: 28px 18px 70px; }
+            .section { padding: 26px 22px; border-radius: 16px; }
+            .section-title { font-size: 20px; gap: 12px; }
+            .section-title .icon { width: 40px; height: 40px; font-size: 18px; }
+            h1 { font-size: 32px; }
+            .subtitle { font-size: 15px; }
+            .toc { padding: 20px 18px; }
+            .toc-list { grid-template-columns: 1fr; }
+            p { font-size: 14.5px; }
+            ul li { font-size: 14px; }
+            ol li { font-size: 14px; }
+            .code-block { font-size: 12px; padding: 16px 14px; }
+            .code-block code { font-size: 12px; }
+            h3 { font-size: 16px; }
+            .tool-grid { grid-template-columns: 1fr; }
+            .use-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 20px 12px 60px; }
+            h1 { font-size: 26px; }
+            .section { padding: 22px 16px; }
+            .section-title { font-size: 17px; }
+            .section-title .icon { width: 34px; height: 34px; font-size: 15px; }
+            .meta-bar { gap: 8px; }
+            .meta-item { font-size: 11px; padding: 6px 12px; }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #05080e; }
+        ::-webkit-scrollbar-thumb { background: #1a2a2a; border-radius: 20px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00ff8833; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <header class="page-header">
+        <div class="badge">
+            <span class="dot"></span>
+            CYBERSUME · COMPLETE GUIDE
+        </div>
+        <h1>C and C++ <span class="highlight">Programming</span></h1>
+        <p class="subtitle">
+            The complete, in-depth guide to C and C++ programming — from syntax basics to advanced systems programming. 
+            The languages that power exploits, malware analysis, and low-level security tools.
+        </p>
+
+        <div class="meta-bar">
+            <div class="meta-item"><span class="ico">📖</span> <span>Reading time: <strong>35 min</strong></span></div>
+            <div class="meta-item"><span class="ico">⚙️</span> <span>Category: <strong>Programming</strong></span></div>
+            <div class="meta-item"><span class="ico">🛡️</span> <span>Level: <strong>Beginner → Advanced</strong></span></div>
+            <div class="meta-item"><span class="ico">⚡</span> <span>Updated: <strong>2025</strong></span></div>
+        </div>
+    </header>
+
+    <!-- ===== TABLE OF CONTENTS ===== -->
+    <nav class="toc">
+        <div class="toc-title">📑 Table of Contents</div>
+        <ul class="toc-list">
+            <li><a href="#intro"><span class="num">01</span> Introduction</a></li>
+            <li><a href="#why"><span class="num">02</span> Why C &amp; C++ for Hackers</a></li>
+            <li><a href="#setup"><span class="num">03</span> Setup &amp; Compilation</a></li>
+            <li><a href="#basics"><span class="num">04</span> C Fundamentals</a></li>
+            <li><a href="#datatypes"><span class="num">05</span> Data Types</a></li>
+            <li><a href="#control"><span class="num">06</span> Control Flow</a></li>
+            <li><a href="#functions"><span class="num">07</span> Functions</a></li>
+            <li><a href="#pointers"><span class="num">08</span> Pointers &amp; Memory</a></li>
+            <li><a href="#arrays"><span class="num">09</span> Arrays &amp; Strings</a></li>
+            <li><a href="#structs"><span class="num">10</span> Structs &amp; Unions</a></li>
+            <li><a href="#cpp"><span class="num">11</span> C++ &amp; OOP</a></li>
+            <li><a href="#stl"><span class="num">12</span> STL &amp; Templates</a></li>
+            <li><a href="#security"><span class="num">13</span> Security &amp; Exploits</a></li>
+            <li><a href="#tools"><span class="num">14</span> Security Tools</a></li>
+            <li><a href="#usecases"><span class="num">15</span> Use Cases</a></li>
+            <li><a href="#best"><span class="num">16</span> Best Practices</a></li>
+            <li><a href="#legal"><span class="num">17</span> Legal &amp; Ethics</a></li>
+            <li><a href="#conclusion"><span class="num">18</span> Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== 01 INTRO ===== -->
+    <section class="section" id="intro">
+        <span class="section-number">01 · INTRODUCTION</span>
+        <h2 class="section-title">
+            <span class="icon">⚙️</span>
+            What Are C and C++?
+        </h2>
+        <p>
+            <strong>C</strong> was created by <em>Dennis Ritchie</em> at Bell Labs in 1972. It was designed for system programming — specifically, to rewrite the UNIX operating system. Nearly every modern operating system, including Linux, Windows, macOS, and Android, is written largely in C. It's the closest thing to a universal assembly language.
+        </p>
+        <p>
+            <strong>C++</strong> was developed by <em>Bjarne Stroustrup</em> in 1979 as an extension of C. It added object-oriented programming, templates, exceptions, and a huge standard library. C++ powers everything from game engines (Unreal) to browsers (Chrome) to databases (MySQL) to embedded systems.
+        </p>
+        <p>
+            For ethical hackers and security researchers, C and C++ are essential because they're the languages of <strong>exploit development</strong>, <strong>malware analysis</strong>, <strong>reverse engineering</strong>, and <strong>low-level systems work</strong>. If you want to understand buffer overflows, write shellcode, or analyze malware, you need C.
+        </p>
+        <div class="callout info">
+            <strong>💡 Note:</strong> C and C++ are compiled languages. You write code in a text file, compile it with <code>gcc</code> or <code>g++</code>, and get a binary executable. This is different from Python or Ruby, which are interpreted.
+        </div>
+    </section>
+
+    <!-- ===== 02 WHY ===== -->
+    <section class="section" id="why">
+        <span class="section-number">02 · WHY C &amp; C++ FOR HACKERS</span>
+        <h2 class="section-title">
+            <span class="icon">💡</span>
+            Why Ethical Hackers Learn C/C++
+        </h2>
+        <p>
+            Python and Ruby are great for automation, but when you need <strong>raw power</strong>, <strong>direct memory access</strong>, and <strong>speed</strong>, nothing beats C and C++. Here's why they're essential for serious security work:
+        </p>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">💥</span>
+                <h4>Exploit Development</h4>
+                <p>Buffer overflows, ROP chains, and shellcode are written in C/Assembly.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔬</span>
+                <h4>Malware Analysis</h4>
+                <p>Most malware is written in C/C++ — you need to read and understand it.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔧</span>
+                <h4>Custom Tools</h4>
+                <p>Write high-performance security tools, rootkits, and implants.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Reverse Engineering</h4>
+                <p>Understanding C teaches you how compilers generate assembly.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🧠</span>
+                <h4>Memory Management</h4>
+                <p>Learn how memory works — critical for exploitation and debugging.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">⚡</span>
+                <h4>Performance</h4>
+                <p>C runs 50-100x faster than Python. Essential for brute-forcing at scale.</p>
+            </div>
+        </div>
+        <div class="callout">
+            <strong>🔑 Key Insight:</strong> You don't need to write <em>everything</em> in C. But you absolutely need to <em>read</em> C to understand exploits, malware, and low-level security research.
+        </div>
+    </section>
+
+    <!-- ===== 03 SETUP ===== -->
+    <section class="section" id="setup">
+        <span class="section-number">03 · SETUP &amp; COMPILATION</span>
+        <h2 class="section-title">
+            <span class="icon">🛠️</span>
+            Installing Compilers &amp; Writing Code
+        </h2>
+        <p>
+            On Kali Linux, you'll need <code>gcc</code> (C compiler) and <code>g++</code> (C++ compiler). Both come pre-installed on most systems, but you can install them if missing.
+        </p>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Install compilers on Kali/Debian</span>
+<span class="cmd">sudo</span> apt update
+<span class="cmd">sudo</span> apt install build-essential gcc g++ gdb
+
+<span class="cmt"># Check versions</span>
+<span class="cmd">gcc</span> --version
+<span class="cmd">g++</span> --version</code>
         </div>
 
-        <!-- ===== INTRODUCTION ===== -->
-        <p>
-            Programming is one of the most valuable skills in today's digital world, and every great software engineer starts by learning strong programming fundamentals. If you're looking for a language that builds problem-solving skills and forms the foundation of modern software development, <strong>C and C++</strong> are excellent choices.
-        </p>
-        <p>
-            Whether you dream of becoming a software engineer, game developer, embedded systems programmer, or competitive coder, learning C and C++ will give you the confidence to understand how computers really work.
-        </p>
+        <h3>Compiling a C Program</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Compile and run</span>
+<span class="cmd">gcc</span> hello.c -o hello
+<span class="cmd">./hello</span>
 
-        <!-- ===== MOTHER OF LANGUAGES ===== -->
-        <div class="mother-box">
-            <p class="big-text">👑 Mother of Modern Programming Languages</p>
-            <p style="color:#b0b8c8;">
-                C and C++ form the foundation of countless modern languages — <strong style="color:#00ff88;">Start here, master everything!</strong>
-            </p>
+<span class="cmt"># Compile with debug symbols (for gdb)</span>
+<span class="cmd">gcc</span> -g hello.c -o hello
+
+<span class="cmt"># Disable protections (for exploit dev practice)</span>
+<span class="cmd">gcc</span> -fno-stack-protector -z execstack -no-pie hello.c -o hello
+
+<span class="cmt"># Compile C++</span>
+<span class="cmd">g++</span> hello.cpp -o hello</code>
         </div>
 
-        <!-- ===== WHY LEARN ===== -->
-        <h2 id="why">💡 Why Learn C and C++?</h2>
+        <h3>Your First C Program</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="pre">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+
+<span class="kw">int</span> <span class="fn">main</span>() {
+    <span class="fn">printf</span>(<span class="str">"Hello, Ethical Hacker!\n"</span>);
+    <span class="kw">return</span> <span class="num">0</span>;
+}</code>
+        </div>
+    </section>
+
+    <!-- ===== 04 BASICS ===== -->
+    <section class="section" id="basics">
+        <span class="section-number">04 · C FUNDAMENTALS</span>
+        <h2 class="section-title">
+            <span class="icon">📚</span>
+            C Fundamentals
+        </h2>
         <p>
-            C is often called the <strong>mother of modern programming languages</strong> because many popular languages—including C++, Java, C#, and others—borrow concepts from it.
+            Every C program has a <strong>main function</strong> where execution begins. You must <code>#include</code> the libraries you use and declare the return type of every function.
+        </p>
+
+        <h3>Hello World — Detailed Breakdown</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="cmt">// Preprocessor directive — includes the standard I/O library</span>
+<span class="pre">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+
+<span class="cmt">// main() is the entry point. Returns int (exit code).</span>
+<span class="kw">int</span> <span class="fn">main</span>(<span class="kw">int</span> argc, <span class="kw">char</span> *argv[]) {
+    <span class="fn">printf</span>(<span class="str">"Hello, Ethical Hacker!\n"</span>);
+    <span class="fn">printf</span>(<span class="str">"Program name: %s\n"</span>, argv[<span class="num">0</span>]);
+    <span class="kw">return</span> <span class="num">0</span>;  <span class="cmt">// 0 = success, non-zero = error</span>
+}</code>
+        </div>
+
+        <h3>Variables &amp; Data Types</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">int</span> port = <span class="num">22</span>;               <span class="cmt">// Integer (4 bytes typically)</span>
+<span class="kw">char</span> grade = <span class="str">'A'</span>;            <span class="cmt">// Single character (1 byte)</span>
+<span class="kw">float</span> ratio = <span class="num">3.14f</span>;         <span class="cmt">// Single-precision float</span>
+<span class="kw">double</span> pi = <span class="num">3.14159265</span>;      <span class="cmt">// Double-precision float</span>
+<span class="kw">unsigned</span> <span class="kw">int</span> count = <span class="num">100</span>;    <span class="cmt">// No negative values</span>
+<span class="kw">long</span> <span class="kw">long</span> big = <span class="num">1234567890</span>; <span class="cmt">// Larger integer</span>
+
+<span class="cmt">// Constants</span>
+<span class="kw">const</span> <span class="kw">int</span> MAX = <span class="num">100</span>;</code>
+        </div>
+
+        <h3>Data Type Sizes</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Type</th><th>Size (typical)</th><th>Range</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>char</code></td><td>1 byte</td><td>-128 to 127</td></tr>
+                    <tr><td><code>short</code></td><td>2 bytes</td><td>-32,768 to 32,767</td></tr>
+                    <tr><td><code>int</code></td><td>4 bytes</td><td>-2.1B to 2.1B</td></tr>
+                    <tr><td><code>long</code></td><td>4-8 bytes</td><td>Platform dependent</td></tr>
+                    <tr><td><code>float</code></td><td>4 bytes</td><td>~7 decimal digits</td></tr>
+                    <tr><td><code>double</code></td><td>8 bytes</td><td>~15 decimal digits</td></tr>
+                    <tr><td><code>void*</code></td><td>8 bytes</td><td>Any pointer (64-bit)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Input &amp; Output</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">int</span> port;
+<span class="kw">char</span> host[<span class="num">64</span>];
+
+<span class="fn">printf</span>(<span class="str">"Enter host: "</span>);
+<span class="fn">scanf</span>(<span class="str">"%s"</span>, host);
+
+<span class="fn">printf</span>(<span class="str">"Enter port: "</span>);
+<span class="fn">scanf</span>(<span class="str">"%d"</span>, &amp;port);
+
+<span class="fn">printf</span>(<span class="str">"Target: %s:%d\n"</span>, host, port);
+
+<span class="cmt">// Format specifiers</span>
+<span class="cmt">// %d = int, %s = string, %c = char, %f = float, %p = pointer, %x = hex</span></code>
+        </div>
+
+        <div class="callout warn">
+            <strong>⚠️ Warning:</strong> <code>scanf("%s", buf)</code> is dangerous — it doesn't check buffer size and causes buffer overflows. Use <code>fgets()</code> instead, or specify width: <code>scanf("%63s", buf)</code>.
+        </div>
+    </section>
+
+    <!-- ===== 05 DATATYPES ===== -->
+    <section class="section" id="datatypes">
+        <span class="section-number">05 · DATA TYPES</span>
+        <h2 class="section-title">
+            <span class="icon">📦</span>
+            Data Types &amp; Modifiers
+        </h2>
+
+        <h3>Type Modifiers</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">signed</span> <span class="kw">int</span> a = -<span class="num">10</span>;       <span class="cmt">// Can be negative (default)</span>
+<span class="kw">unsigned</span> <span class="kw">int</span> b = <span class="num">10</span>;      <span class="cmt">// Only positive</span>
+<span class="kw">short</span> <span class="kw">int</span> c = <span class="num">100</span>;         <span class="cmt">// Smaller range</span>
+<span class="kw">long</span> <span class="kw">int</span> d = <span class="num">100000L</span>;      <span class="cmt">// Larger range</span>
+<span class="kw">long</span> <span class="kw">long</span> e = <span class="num">1000000LL</span>;</code>
+        </div>
+
+        <h3>Type Casting</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">int</span> a = <span class="num">10</span>;
+<span class="kw">int</span> b = <span class="num">3</span>;
+
+<span class="cmt">// Integer division — loses decimal</span>
+<span class="kw">float</span> result1 = a / b;        <span class="cmt">// 3.0 (integer division)</span>
+<span class="kw">float</span> result2 = (<span class="kw">float</span>)a / b;  <span class="cmt">// 3.333... (cast to float)</span>
+
+<span class="fn">printf</span>(<span class="str">"%.2f\n"</span>, result2);</code>
+        </div>
+
+        <h3>Enumerations</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">enum</span> Status { CLOSED, OPEN, FILTERED };
+
+<span class="kw">enum</span> Status port_status = OPEN;
+
+<span class="kw">if</span> (port_status == OPEN) {
+    <span class="fn">printf</span>(<span class="str">"Port is open!\n"</span>);
+}
+
+<span class="cmt">// Custom values</span>
+<span class="kw">enum</span> Color { RED = <span class="num">1</span>, GREEN = <span class="num">2</span>, BLUE = <span class="num">4</span> };</code>
+        </div>
+    </section>
+
+    <!-- ===== 06 CONTROL ===== -->
+    <section class="section" id="control">
+        <span class="section-number">06 · CONTROL FLOW</span>
+        <h2 class="section-title">
+            <span class="icon">🔀</span>
+            Control Flow
+        </h2>
+
+        <h3>If / Else If / Else</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">int</span> port = <span class="num">443</span>;
+
+<span class="kw">if</span> (port == <span class="num">22</span>) {
+    <span class="fn">printf</span>(<span class="str">"SSH\n"</span>);
+} <span class="kw">else</span> <span class="kw">if</span> (port == <span class="num">80</span>) {
+    <span class="fn">printf</span>(<span class="str">"HTTP\n"</span>);
+} <span class="kw">else</span> <span class="kw">if</span> (port == <span class="num">443</span>) {
+    <span class="fn">printf</span>(<span class="str">"HTTPS\n"</span>);
+} <span class="kw">else</span> {
+    <span class="fn">printf</span>(<span class="str">"Unknown\n"</span>);
+}</code>
+        </div>
+
+        <h3>Switch Statement</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">switch</span> (port) {
+    <span class="kw">case</span> <span class="num">22</span>:
+        <span class="fn">printf</span>(<span class="str">"SSH\n"</span>);
+        <span class="kw">break</span>;
+    <span class="kw">case</span> <span class="num">80</span>:
+    <span class="kw">case</span> <span class="num">443</span>:
+        <span class="fn">printf</span>(<span class="str">"Web\n"</span>);
+        <span class="kw">break</span>;
+    <span class="kw">default</span>:
+        <span class="fn">printf</span>(<span class="str">"Unknown\n"</span>);
+}</code>
+        </div>
+
+        <h3>Loops</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="cmt">// for loop</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; <span class="num">10</span>; i++) {
+    <span class="fn">printf</span>(<span class="str">"%d\n"</span>, i);
+}
+
+<span class="cmt">// while loop</span>
+<span class="kw">int</span> n = <span class="num">0</span>;
+<span class="kw">while</span> (n &lt; <span class="num">10</span>) {
+    <span class="fn">printf</span>(<span class="str">"%d\n"</span>, n);
+    n++;
+}
+
+<span class="cmt">// do-while (runs at least once)</span>
+<span class="kw">do</span> {
+    <span class="fn">printf</span>(<span class="str">"Runs once at minimum\n"</span>);
+} <span class="kw">while</span> (<span class="num">0</span>);
+
+<span class="cmt">// break & continue</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; <span class="num">100</span>; i++) {
+    <span class="kw">if</span> (i % <span class="num">2</span> == <span class="num">0</span>) <span class="kw">continue</span>;  <span class="cmt">// Skip evens</span>
+    <span class="kw">if</span> (i &gt; <span class="num">20</span>) <span class="kw">break</span>;            <span class="cmt">// Stop at 20</span>
+    <span class="fn">printf</span>(<span class="str">"%d\n"</span>, i);
+}</code>
+        </div>
+    </section>
+
+    <!-- ===== 07 FUNCTIONS ===== -->
+    <section class="section" id="functions">
+        <span class="section-number">07 · FUNCTIONS</span>
+        <h2 class="section-title">
+            <span class="icon">🧩</span>
+            Functions &amp; Scope
+        </h2>
+
+        <h3>Declaring Functions</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="cmt">// Function prototype (declaration)</span>
+<span class="kw">int</span> <span class="fn">add</span>(<span class="kw">int</span> a, <span class="kw">int</span> b);
+
+<span class="cmt">// Function definition</span>
+<span class="kw">int</span> <span class="fn">add</span>(<span class="kw">int</span> a, <span class="kw">int</span> b) {
+    <span class="kw">return</span> a + b;
+}
+
+<span class="cmt">// Function that takes a pointer (modifies original)</span>
+<span class="kw">void</span> <span class="fn">increment</span>(<span class="kw">int</span> *n) {
+    (*n)++;
+}
+
+<span class="kw">int</span> <span class="fn">main</span>() {
+    <span class="fn">printf</span>(<span class="str">"%d\n"</span>, <span class="fn">add</span>(<span class="num">5</span>, <span class="num">3</span>));  <span class="cmt">// 8</span>
+
+    <span class="kw">int</span> x = <span class="num">10</span>;
+    <span class="fn">increment</span>(&amp;x);
+    <span class="fn">printf</span>(<span class="str">"%d\n"</span>, x);         <span class="cmt">// 11</span>
+    <span class="kw">return</span> <span class="num">0</span>;
+}</code>
+        </div>
+
+        <h3>Static &amp; Global Variables</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">int</span> global_counter = <span class="num">0</span>;  <span class="cmt">// Accessible everywhere</span>
+
+<span class="kw">void</span> <span class="fn">counter</span>() {
+    <span class="kw">static</span> <span class="kw">int</span> count = <span class="num">0</span>;  <span class="cmt">// Persists across calls</span>
+    count++;
+    <span class="fn">printf</span>(<span class="str">"Called %d times\n"</span>, count);
+}
+
+<span class="kw">int</span> <span class="fn">main</span>() {
+    <span class="fn">counter</span>();  <span class="cmt">// 1</span>
+    <span class="fn">counter</span>();  <span class="cmt">// 2</span>
+    <span class="fn">counter</span>();  <span class="cmt">// 3</span>
+    <span class="kw">return</span> <span class="num">0</span>;
+}</code>
+        </div>
+
+        <h3>Recursion</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">int</span> <span class="fn">factorial</span>(<span class="kw">int</span> n) {
+    <span class="kw">if</span> (n &lt;= <span class="num">1</span>) <span class="kw">return</span> <span class="num">1</span>;
+    <span class="kw">return</span> n * <span class="fn">factorial</span>(n - <span class="num">1</span>);
+}
+
+<span class="fn">printf</span>(<span class="str">"%d\n"</span>, <span class="fn">factorial</span>(<span class="num">5</span>));  <span class="cmt">// 120</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 08 POINTERS ===== -->
+    <section class="section" id="pointers">
+        <span class="section-number">08 · POINTERS &amp; MEMORY</span>
+        <h2 class="section-title">
+            <span class="icon">🎯</span>
+            Pointers &amp; Memory Management
+        </h2>
+        <p>
+            Pointers are the <strong>most important and most dangerous</strong> feature of C. They store memory addresses and give you direct control over memory — which is why C is used for exploits and malware.
+        </p>
+
+        <h3>Pointer Basics</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">int</span> x = <span class="num">42</span>;
+<span class="kw">int</span> *p = &amp;x;      <span class="cmt">// p holds the address of x</span>
+
+<span class="fn">printf</span>(<span class="str">"x = %d\n"</span>, x);       <span class="cmt">// 42</span>
+<span class="fn">printf</span>(<span class="str">"&x = %p\n"</span>, &amp;x);    <span class="cmt">// address</span>
+<span class="fn">printf</span>(<span class="str">"p = %p\n"</span>, p);       <span class="cmt">// same address</span>
+<span class="fn">printf</span>(<span class="str">"*p = %d\n"</span>, *p);     <span class="cmt">// 42 (dereferencing)</span>
+
+*p = <span class="num">100</span>;             <span class="cmt">// Modify x through pointer</span>
+<span class="fn">printf</span>(<span class="str">"x = %d\n"</span>, x);       <span class="cmt">// 100</span></code>
+        </div>
+
+        <h3>Dynamic Memory Allocation</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="pre">#include</span> <span class="str">&lt;stdlib.h&gt;</span>
+
+<span class="cmt">// Allocate memory for 10 ints</span>
+<span class="kw">int</span> *arr = (<span class="kw">int</span> *)<span class="fn">malloc</span>(<span class="num">10</span> * <span class="kw">sizeof</span>(<span class="kw">int</span>));
+
+<span class="cmt">// Check if allocation succeeded</span>
+<span class="kw">if</span> (arr == <span class="num">NULL</span>) {
+    <span class="fn">fprintf</span>(<span class="fn">stderr</span>, <span class="str">"Memory allocation failed\n"</span>);
+    <span class="kw">return</span> <span class="num">1</span>;
+}
+
+<span class="cmt">// Use the array</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; <span class="num">10</span>; i++) {
+    arr[i] = i * i;
+}
+
+<span class="cmt">// Free the memory when done</span>
+<span class="fn">free</span>(arr);
+
+<span class="cmt">// Other allocation functions</span>
+<span class="fn">calloc</span>(<span class="num">10</span>, <span class="kw">sizeof</span>(<span class="kw">int</span>));  <span class="cmt">// Zero-initialized</span>
+<span class="fn">realloc</span>(arr, <span class="num">20</span> * <span class="kw">sizeof</span>(<span class="kw">int</span>));  <span class="cmt">// Resize</span></code>
+        </div>
+
+        <div class="callout warn">
+            <strong>⚠️ Critical:</strong> Always <code>free()</code> memory you <code>malloc()</code>. Always check for <code>NULL</code>. Never use memory after freeing. These bugs are the source of countless exploits.
+        </div>
+
+        <h3>Pointer Arithmetic</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">int</span> arr[] = {<span class="num">10</span>, <span class="num">20</span>, <span class="num">30</span>, <span class="num">40</span>};
+<span class="kw">int</span> *p = arr;
+
+<span class="fn">printf</span>(<span class="str">"%d\n"</span>, *p);        <span class="cmt">// 10</span>
+<span class="fn">printf</span>(<span class="str">"%d\n"</span>, *(p+<span class="num">1</span>));    <span class="cmt">// 20</span>
+<span class="fn">printf</span>(<span class="str">"%d\n"</span>, *(p+<span class="num">2</span>));    <span class="cmt">// 30</span>
+
+p++;                    <span class="cmt">// Move pointer forward</span>
+<span class="fn">printf</span>(<span class="str">"%d\n"</span>, *p);        <span class="cmt">// 20</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 09 ARRAYS ===== -->
+    <section class="section" id="arrays">
+        <span class="section-number">09 · ARRAYS &amp; STRINGS</span>
+        <h2 class="section-title">
+            <span class="icon">📊</span>
+            Arrays &amp; Strings
+        </h2>
+
+        <h3>Arrays</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="cmt">// Declare and initialize</span>
+<span class="kw">int</span> ports[<span class="num">5</span>] = {<span class="num">21</span>, <span class="num">22</span>, <span class="num">80</span>, <span class="num">443</span>, <span class="num">3306</span>};
+
+<span class="cmt">// Access and modify</span>
+<span class="fn">printf</span>(<span class="str">"%d\n"</span>, ports[<span class="num">0</span>]);  <span class="cmt">// 21</span>
+ports[<span class="num">1</span>] = <span class="num">2222</span>;
+
+<span class="cmt">// Iterate</span>
+<span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; <span class="num">5</span>; i++) {
+    <span class="fn">printf</span>(<span class="str">"Port: %d\n"</span>, ports[i]);
+}
+
+<span class="cmt">// 2D array</span>
+<span class="kw">int</span> matrix[<span class="num">3</span>][<span class="num">3</span>] = {{<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>}, {<span class="num">4</span>,<span class="num">5</span>,<span class="num">6</span>}, {<span class="num">7</span>,<span class="num">8</span>,<span class="num">9</span>}};</code>
+        </div>
+
+        <h3>Strings — Character Arrays</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="pre">#include</span> <span class="str">&lt;string.h&gt;</span>
+
+<span class="cmt">// C strings are null-terminated char arrays</span>
+<span class="kw">char</span> name[<span class="num">20</span>] = <span class="str">"Hacker"</span>;
+<span class="kw">char</span> *host = <span class="str">"example.com"</span>;
+
+<span class="cmt">// Common string functions</span>
+<span class="fn">strlen</span>(name);                    <span class="cmt">// Length: 6</span>
+<span class="fn">strcpy</span>(name, <span class="str">"NewName"</span>);           <span class="cmt">// Copy (unsafe!)</span>
+<span class="fn">strncpy</span>(name, <span class="str">"Safe"</span>, <span class="num">19</span>);         <span class="cmt">// Copy with bound</span>
+<span class="fn">strcat</span>(name, <span class="str">"!"</span>);                 <span class="cmt">// Concatenate</span>
+<span class="fn">strcmp</span>(name, <span class="str">"Other"</span>);            <span class="cmt">// Compare</span>
+<span class="fn">strstr</span>(name, <span class="str">"ack"</span>);             <span class="cmt">// Find substring</span>
+
+<span class="cmt">// Safe input</span>
+<span class="fn">fgets</span>(name, <span class="kw">sizeof</span>(name), <span class="fn">stdin</span>);</code>
+        </div>
+
+        <div class="callout warn">
+            <strong>⚠️ Warning:</strong> <code>strcpy()</code> and <code>strcat()</code> don't check buffer sizes — they cause <strong>buffer overflows</strong>. Use <code>strncpy()</code> and <code>strncat()</code> with explicit bounds. This is one of the most common vulnerability classes.
+        </div>
+    </section>
+
+    <!-- ===== 10 STRUCTS ===== -->
+    <section class="section" id="structs">
+        <span class="section-number">10 · STRUCTS &amp; UNIONS</span>
+        <h2 class="section-title">
+            <span class="icon">🏗️</span>
+            Structs, Unions &amp; Typedefs
+        </h2>
+
+        <h3>Structs — Custom Data Types</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">struct</span> Target {
+    <span class="kw">char</span> ip[<span class="num">16</span>];
+    <span class="kw">int</span> port;
+    <span class="kw">char</span> os[<span class="num">32</span>];
+    <span class="kw">int</span> vulnerable;
+};
+
+<span class="cmt">// Using a struct</span>
+<span class="kw">struct</span> Target t1;
+<span class="fn">strcpy</span>(t1.ip, <span class="str">"192.168.1.1"</span>);
+t1.port = <span class="num">22</span>;
+<span class="fn">strcpy</span>(t1.os, <span class="str">"Linux"</span>);
+t1.vulnerable = <span class="num">1</span>;
+
+<span class="fn">printf</span>(<span class="str">"Target: %s:%d (%s)\n"</span>, t1.ip, t1.port, t1.os);
+
+<span class="cmt">// Pointer to struct</span>
+<span class="kw">struct</span> Target *ptr = &amp;t1;
+<span class="fn">printf</span>(<span class="str">"Port: %d\n"</span>, ptr-&gt;port);  <span class="cmt">// Arrow operator</span></code>
+        </div>
+
+        <h3>Typedef — Cleaner Syntax</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">typedef</span> <span class="kw">struct</span> {
+    <span class="kw">char</span> ip[<span class="num">16</span>];
+    <span class="kw">int</span> port;
+} Target;
+
+<span class="cmt">// Now use without "struct" keyword</span>
+Target t1;
+t1.port = <span class="num">80</span>;</code>
+        </div>
+
+        <h3>Unions — Shared Memory</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">union</span> Data {
+    <span class="kw">int</span> i;
+    <span class="kw">float</span> f;
+    <span class="kw">char</span> str[<span class="num">4</span>];
+};
+
+<span class="kw">union</span> Data d;
+d.i = <span class="num">0x41424344</span>;
+
+<span class="cmt">// Access same bytes as different types</span>
+<span class="fn">printf</span>(<span class="str">"%c%c%c%c\n"</span>, d.str[<span class="num">3</span>], d.str[<span class="num">2</span>], d.str[<span class="num">1</span>], d.str[<span class="num">0</span>]);</code>
+        </div>
+    </section>
+
+    <!-- ===== 11 CPP ===== -->
+    <section class="section" id="cpp">
+        <span class="section-number">11 · C++ &amp; OOP</span>
+        <h2 class="section-title">
+            <span class="icon">🔷</span>
+            C++ &amp; Object-Oriented Programming
+        </h2>
+        <p>
+            C++ extends C with object-oriented features: classes, inheritance, polymorphism, templates, and exceptions. It's a superset of C — almost all C code compiles as C++.
+        </p>
+
+        <h3>C++ Hello World</h3>
+        <div class="code-block" data-lang="cpp">
+<code><span class="pre">#include</span> <span class="str">&lt;iostream&gt;</span>
+
+<span class="kw">int</span> <span class="fn">main</span>() {
+    std::cout &lt;&lt; <span class="str">"Hello, Hacker!"</span> &lt;&lt; std::endl;
+    <span class="kw">return</span> <span class="num">0</span>;
+}</code>
+        </div>
+
+        <h3>Classes &amp; Objects</h3>
+        <div class="code-block" data-lang="cpp">
+<code><span class="kw">class</span> <span class="cls">Target</span> {
+<span class="kw">private</span>:
+    std::string ip;
+    <span class="kw">int</span> port;
+    std::vector&lt;<span class="kw">int</span>&gt; open_ports;
+
+<span class="kw">public</span>:
+    <span class="cmt">// Constructor</span>
+    <span class="cls">Target</span>(std::string ip, <span class="kw">int</span> port) : ip(ip), port(port) {}
+
+    <span class="cmt">// Destructor</span>
+    ~<span class="cls">Target</span>() {}
+
+    <span class="cmt">// Methods</span>
+    <span class="kw">void</span> <span class="fn">addPort</span>(<span class="kw">int</span> p) {
+        open_ports.push_back(p);
+    }
+
+    <span class="kw">void</span> <span class="fn">display</span>() <span class="kw">const</span> {
+        std::cout &lt;&lt; <span class="str">"Target: "</span> &lt;&lt; ip &lt;&lt; <span class="str">":"</span> &lt;&lt; port &lt;&lt; std::endl;
+    }
+
+    <span class="cmt">// Getter</span>
+    std::string <span class="fn">getIp</span>() <span class="kw">const</span> { <span class="kw">return</span> ip; }
+};
+
+<span class="kw">int</span> <span class="fn">main</span>() {
+    <span class="cls">Target</span> t(<span class="str">"192.168.1.1"</span>, <span class="num">22</span>);
+    t.<span class="fn">addPort</span>(<span class="num">80</span>);
+    t.<span class="fn">addPort</span>(<span class="num">443</span>);
+    t.<span class="fn">display</span>();
+    <span class="kw">return</span> <span class="num">0</span>;
+}</code>
+        </div>
+
+        <h3>Inheritance</h3>
+        <div class="code-block" data-lang="cpp">
+<code><span class="kw">class</span> <span class="cls">WebTarget</span> : <span class="kw">public</span> <span class="cls">Target</span> {
+<span class="kw">private</span>:
+    std::string domain;
+
+<span class="kw">public</span>:
+    <span class="cls">WebTarget</span>(std::string ip, <span class="kw">int</span> port, std::string domain)
+        : <span class="cls">Target</span>(ip, port), domain(domain) {}
+
+    <span class="kw">void</span> <span class="fn">display</span>() <span class="kw">const</span> {
+        <span class="cls">Target</span>::<span class="fn">display</span>();
+        std::cout &lt;&lt; <span class="str">"Domain: "</span> &lt;&lt; domain &lt;&lt; std::endl;
+    }
+};</code>
+        </div>
+
+        <h3>Polymorphism &amp; Virtual Functions</h3>
+        <div class="code-block" data-lang="cpp">
+<code><span class="kw">class</span> <span class="cls">Scanner</span> {
+<span class="kw">public</span>:
+    <span class="kw">virtual</span> <span class="kw">void</span> <span class="fn">scan</span>() {
+        std::cout &lt;&lt; <span class="str">"Generic scan"</span> &lt;&lt; std::endl;
+    }
+    <span class="kw">virtual</span> ~<span class="cls">Scanner</span>() {}
+};
+
+<span class="kw">class</span> <span class="cls">NmapScanner</span> : <span class="kw">public</span> <span class="cls">Scanner</span> {
+<span class="kw">public</span>:
+    <span class="kw">void</span> <span class="fn">scan</span>() <span class="kw">override</span> {
+        std::cout &lt;&lt; <span class="str">"Running Nmap scan"</span> &lt;&lt; std::endl;
+    }
+};</code>
+        </div>
+    </section>
+
+    <!-- ===== 12 STL ===== -->
+    <section class="section" id="stl">
+        <span class="section-number">12 · STL &amp; TEMPLATES</span>
+        <h2 class="section-title">
+            <span class="icon">📚</span>
+            Standard Template Library (STL)
+        </h2>
+        <p>
+            The STL is C++'s killer feature — a rich collection of data structures and algorithms ready to use.
+        </p>
+
+        <h3>Common Containers</h3>
+        <div class="code-block" data-lang="cpp">
+<code><span class="pre">#include</span> <span class="str">&lt;vector&gt;</span>
+<span class="pre">#include</span> <span class="str">&lt;map&gt;</span>
+<span class="pre">#include</span> <span class="str">&lt;set&gt;</span>
+<span class="pre">#include</span> <span class="str">&lt;string&gt;</span>
+
+<span class="cmt">// Vector — dynamic array</span>
+std::vector&lt;<span class="kw">int</span>&gt; ports = {<span class="num">22</span>, <span class="num">80</span>, <span class="num">443</span>};
+ports.push_back(<span class="num">8080</span>);
+
+<span class="kw">for</span> (<span class="kw">int</span> p : ports) {
+    std::cout &lt;&lt; p &lt;&lt; std::endl;
+}
+
+<span class="cmt">// Map — key-value pairs (sorted)</span>
+std::map&lt;std::string, <span class="kw">int</span>&gt; services;
+services[<span class="str">"ssh"</span>] = <span class="num">22</span>;
+services[<span class="str">"http"</span>] = <span class="num">80</span>;
+services[<span class="str">"https"</span>] = <span class="num">443</span>;
+
+<span class="kw">for</span> (<span class="kw">auto</span> &amp;pair : services) {
+    std::cout &lt;&lt; pair.first &lt;&lt; <span class="str">" → "</span> &lt;&lt; pair.second &lt;&lt; std::endl;
+}
+
+<span class="cmt">// Set — unique elements</span>
+std::set&lt;std::string&gt; unique_ips = {<span class="str">"10.0.0.1"</span>, <span class="str">"10.0.0.2"</span>};</code>
+        </div>
+
+        <h3>Templates — Generic Programming</h3>
+        <div class="code-block" data-lang="cpp">
+<code><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+T <span class="fn">max</span>(T a, T b) {
+    <span class="kw">return</span> (a &gt; b) ? a : b;
+}
+
+std::cout &lt;&lt; <span class="fn">max</span>(<span class="num">5</span>, <span class="num">10</span>) &lt;&lt; std::endl;         <span class="cmt">// int</span>
+std::cout &lt;&lt; <span class="fn">max</span>(<span class="num">3.14</span>, <span class="num">2.71</span>) &lt;&lt; std::endl;     <span class="cmt">// double</span>
+std::cout &lt;&lt; <span class="fn">max</span>(std::string(<span class="str">"a"</span>), std::string(<span class="str">"b"</span>));</code>
+        </div>
+
+        <h3>Smart Pointers (C++11+)</h3>
+        <div class="code-block" data-lang="cpp">
+<code><span class="pre">#include</span> <span class="str">&lt;memory&gt;</span>
+
+<span class="cmt">// Unique pointer — exclusive ownership</span>
+std::unique_ptr&lt;<span class="kw">int</span>&gt; p1 = std::make_unique&lt;<span class="kw">int</span>&gt;(<span class="num">42</span>);
+
+<span class="cmt">// Shared pointer — reference counted</span>
+std::shared_ptr&lt;<span class="kw">int</span>&gt; p2 = std::make_shared&lt;<span class="kw">int</span>&gt;(<span class="num">100</span>);
+
+<span class="cmt">// No manual delete needed — automatic cleanup</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 13 SECURITY ===== -->
+    <section class="section" id="security">
+        <span class="section-number">13 · SECURITY &amp; EXPLOITS</span>
+        <h2 class="section-title">
+            <span class="icon">💥</span>
+            Security, Exploits &amp; Vulnerabilities
+        </h2>
+        <p>
+            Understanding C at a low level is essential for exploitation. Here are the classic vulnerability classes you'll encounter.
+        </p>
+
+        <h3>Buffer Overflow — The Classic</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="cmt">// VULNERABLE CODE — DO NOT USE IN PRODUCTION</span>
+<span class="kw">void</span> <span class="fn">vulnerable</span>(<span class="kw">char</span> *input) {
+    <span class="kw">char</span> buffer[<span class="num">64</span>];
+    <span class="fn">strcpy</span>(buffer, input);  <span class="cmt">// No bounds check!</span>
+}
+
+<span class="cmt">// If input is longer than 64 bytes, it overwrites</span>
+<span class="cmt">// the return address on the stack → code execution</span>
+
+<span class="cmt">// SAFE version</span>
+<span class="kw">void</span> <span class="fn">safe</span>(<span class="kw">char</span> *input) {
+    <span class="kw">char</span> buffer[<span class="num">64</span>];
+    <span class="fn">strncpy</span>(buffer, input, <span class="kw">sizeof</span>(buffer) - <span class="num">1</span>);
+    buffer[<span class="kw">sizeof</span>(buffer) - <span class="num">1</span>] = <span class="str">'\0'</span>;
+}</code>
+        </div>
+
+        <h3>Format String Vulnerability</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="cmt">// VULNERABLE</span>
+<span class="fn">printf</span>(user_input);  <span class="cmt">// If user_input contains %x, %s, %n...</span>
+
+<span class="cmt">// SAFE</span>
+<span class="fn">printf</span>(<span class="str">"%s"</span>, user_input);</code>
+        </div>
+
+        <h3>Integer Overflow</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">unsigned</span> <span class="kw">int</span> a = <span class="num">4294967295</span>;  <span class="cmt">// Max uint32</span>
+a = a + <span class="num">1</span>;                    <span class="cmt">// Wraps to 0!</span>
+
+<span class="cmt">// Common in size calculations:</span>
+<span class="kw">int</span> size = user_len + <span class="num">1</span>;      <span class="cmt">// Can overflow</span>
+<span class="kw">char</span> *buf = <span class="fn">malloc</span>(size);  <span class="cmt">// Too small allocation</span></code>
+        </div>
+
+        <h3>Use-After-Free</h3>
+        <div class="code-block" data-lang="c">
+<code><span class="kw">char</span> *ptr = <span class="fn">malloc</span>(<span class="num">100</span>);
+<span class="fn">free</span>(ptr);
+<span class="cmt">// ptr is now dangling</span>
+<span class="fn">strcpy</span>(ptr, <span class="str">"data"</span>);  <span class="cmt">// Use-after-free vulnerability!</span></code>
+        </div>
+
+        <h3>Compilation Protections</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Protection</th><th>Flag</th><th>Purpose</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Stack Canary</td><td><code>-fstack-protector</code></td><td>Detects stack smashing</td></tr>
+                    <tr><td>NX / DEP</td><td><code>-z noexecstack</code></td><td>Prevents code on stack</td></tr>
+                    <tr><td>PIE / ASLR</td><td><code>-pie -fPIE</code></td><td>Randomizes memory layout</td></tr>
+                    <tr><td>RELRO</td><td><code>-Wl,-z,relro</code></td><td>Protects GOT</td></tr>
+                    <tr><td>FORTIFY</td><td><code>-D_FORTIFY_SOURCE=2</code></td><td>Checks buffer sizes</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Compile with all protections enabled (production)</span>
+<span class="cmd">gcc</span> -fstack-protector-strong -D_FORTIFY_SOURCE=2 -pie -fPIE -Wl,-z,relro,-z,now secure.c -o secure
+
+<span class="cmt"># Compile with NO protections (for exploit dev practice)</span>
+<span class="cmd">gcc</span> -fno-stack-protector -z execstack -no-pie -m32 vulnerable.c -o vulnerable</code>
+        </div>
+    </section>
+
+    <!-- ===== 14 TOOLS ===== -->
+    <section class="section" id="tools">
+        <span class="section-number">14 · SECURITY TOOLS</span>
+        <h2 class="section-title">
+            <span class="icon">🔧</span>
+            C/C++ Security Tools
+        </h2>
+
+        <div class="tool-grid">
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🐛</span> gdb</div>
+                <p>GNU Debugger — the essential tool for reverse engineering and exploit development.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🔬</span> pwndbg / GEF</div>
+                <p>gdb plugins that supercharge debugging with heap analysis, ROP gadgets, and more.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">📦</span> objdump</div>
+                <p>Disassemble binaries. See what a compiled program actually does at assembly level.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🔍</span> ltrace / strace</div>
+                <p>Trace library and system calls — see exactly what a binary does at runtime.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🎯</span> checksec</div>
+                <p>Inspect binary protections (ASLR, NX, canary, PIE, RELRO).</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">💣</span> ROPgadget</div>
+                <p>Find ROP gadgets in binaries for return-oriented programming attacks.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">📖</span> radare2 / rizin</div>
+                <p>Reverse engineering framework. Disassemble, debug, patch binaries.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🔐</span> Ghidra</div>
+                <p>NSA's open-source reverse engineering suite. Decompiles binaries to C.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">⚙️</span> valgrind</div>
+                <p>Memory error detector. Finds leaks, overflows, and uninitialized reads.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🛡️</span> AFL / libFuzzer</div>
+                <p>Fuzzing tools — feed random input to find crashes and vulnerabilities.</p>
+            </div>
+        </div>
+
+        <h3>Basic gdb Usage</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Start debugger</span>
+<span class="cmd">gdb</span> ./program
+
+<span class="cmt"># Inside gdb:</span>
+(gdb) <span class="cmd">break</span> main         <span class="cmt"># Set breakpoint</span>
+(gdb) <span class="cmd">run</span>                 <span class="cmt"># Run program</span>
+(gdb) <span class="cmd">next</span>                <span class="cmt"># Step over</span>
+(gdb) <span class="cmd">step</span>                <span class="cmt"># Step into</span>
+(gdb) <span class="cmd">info</span> registers      <span class="cmt"># Show all registers</span>
+(gdb) <span class="cmd">x/20x</span> $rsp         <span class="cmt"># Examine stack memory</span>
+(gdb) <span class="cmd">disassemble</span> main    <span class="cmt"># Show assembly</span>
+(gdb) <span class="cmd">continue</span>            <span class="cmt"># Resume</span>
+(gdb) <span class="cmd">quit</span>                <span class="cmt"># Exit</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 15 USE CASES ===== -->
+    <section class="section" id="usecases">
+        <span class="section-number">15 · USE CASES</span>
+        <h2 class="section-title">
+            <span class="icon">🎯</span>
+            Where C/C++ Shines in Security
+        </h2>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">💥</span>
+                <h4>Exploit Development</h4>
+                <p>Buffer overflows, ROP chains, heap exploitation, shellcode.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔬</span>
+                <h4>Malware Analysis</h4>
+                <p>Most malware is written in C/C++ — read, understand, and analyze it.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔧</span>
+                <h4>Rootkits &amp; Implants</h4>
+                <p>Low-level kernel modules and persistent backdoors.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Reverse Engineering</h4>
+                <p>Understand how compilers generate assembly and how to reverse it.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔐</span>
+                <h4>Cryptography</h4>
+                <p>Implement crypto primitives, custom encryption, and bypasses.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📡</span>
+                <h4>Network Tools</h4>
+                <p>High-performance packet sniffers, packet crafters, and scanners.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🧪</span>
+                <h4>Fuzzing</h4>
+                <p>Write custom fuzzers and analyze crashes for vulnerabilities.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🛡️</span>
+                <h4>Security Tools</h4>
+                <p>Nmap, Metasploit, Wireshark, John — all use C/C++ internally.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 16 BEST ===== -->
+    <section class="section" id="best">
+        <span class="section-number">16 · BEST PRACTICES</span>
+        <h2 class="section-title">
+            <span class="icon">✅</span>
+            Best Practices
+        </h2>
+        <ol>
+            <li><strong>Always check for NULL</strong> — After <code>malloc()</code>, <code>fopen()</code>, etc.</li>
+            <li><strong>Use bounded string functions</strong> — <code>strncpy()</code>, <code>snprintf()</code>, <code>fgets()</code>.</li>
+            <li><strong>Free what you allocate</strong> — Avoid memory leaks. Use <code>valgrind</code> to check.</li>
+            <li><strong>Compile with warnings</strong> — <code>gcc -Wall -Wextra -Werror</code>.</li>
+            <li><strong>Enable security flags</strong> — <code>-fstack-protector-strong -D_FORTIFY_SOURCE=2 -pie -fPIE</code>.</li>
+            <li><strong>Initialize variables</strong> — Never use uninitialized memory.</li>
+            <li><strong>Validate input</strong> — Never trust <code>argv</code>, <code>stdin</code>, or network data.</li>
+            <li><strong>Use <code>const</code> where possible</strong> — Documents intent and helps the compiler.</li>
+            <li><strong>Prefer C++ RAII over manual memory</strong> — Smart pointers, vectors, strings.</li>
+            <li><strong>Test with sanitizers</strong> — <code>-fsanitize=address,undefined</code> during development.</li>
+        </ol>
+
+        <h3>Safe Compilation Flags</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Development (with sanitizers)</span>
+<span class="cmd">gcc</span> -g -Wall -Wextra -fsanitize=address,undefined program.c -o program
+
+<span class="cmt"># Production (with hardening)</span>
+<span class="cmd">gcc</span> -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2 \
+    -fPIE -pie -Wl,-z,relro,-z,now program.c -o program</code>
+        </div>
+
+        <h3>Valgrind — Memory Check</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Check for memory errors and leaks</span>
+<span class="cmd">valgrind</span> --leak-check=full --show-leak-kinds=all ./program</code>
+        </div>
+    </section>
+
+    <!-- ===== 17 LEGAL ===== -->
+    <section class="section" id="legal">
+        <span class="section-number">17 · LEGAL &amp; ETHICS</span>
+        <h2 class="section-title">
+            <span class="icon">⚖️</span>
+            Legal &amp; Ethical Boundaries
+        </h2>
+        <div class="callout warn">
+            <strong>⚠️ Critical Warning:</strong> Writing exploits and security tools is legal. <strong>Using them against systems you don't own or have permission to test is a crime.</strong> Unauthorized access can lead to imprisonment, fines, and a permanent criminal record.
+        </div>
+
+        <h3>Legal Practice Environments</h3>
+        <div class="tool-grid">
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🧪</span> pwn.college</div>
+                <p>Free, world-class binary exploitation training from ASU.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🎯</span> picoCTF</div>
+                <p>Beginner-friendly CTF with excellent binary exploitation challenges.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">💀</span> ROP Emporium</div>
+                <p>Learn return-oriented programming step by step.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🔓</span> Exploit.Education</div>
+                <p>Free courses on Linux and Windows exploitation.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🌐</span> Nightmare</div>
+                <p>Free CTF-style binary exploitation course on GitHub.</p>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name"><span class="ico">🎓</span> HTB Academy</div>
+                <p>Structured learning paths for binary exploitation.</p>
+            </div>
+        </div>
+
+        <div class="callout info">
+            <strong>💡 Ethical Hacker's Oath:</strong> With great power comes great responsibility. Your skills should protect, not harm. Always operate within legal and ethical boundaries.
+        </div>
+    </section>
+
+    <!-- ===== 18 CONCLUSION ===== -->
+    <section class="section" id="conclusion">
+        <span class="section-number">18 · CONCLUSION</span>
+        <h2 class="section-title">
+            <span class="icon">🎓</span>
+            Final Thoughts
+        </h2>
+        <p>
+            C and C++ are the <strong>foundational languages of computing</strong>. Every operating system, every browser, every database, and virtually every security tool is built on them. For ethical hackers, they are indispensable — the key to understanding <em>how</em> systems actually work at the lowest level.
         </p>
         <p>
-            C++ builds upon C by introducing Object-Oriented Programming (OOP), making it ideal for creating large-scale applications, games, desktop software, and high-performance systems.
-        </p>
-        <p>
-            <strong>Learning these languages helps you:</strong>
+            Python and Bash make you productive. C and C++ make you <strong>dangerous</strong>. They let you:
         </p>
         <ul>
-            <li>Build a strong programming foundation</li>
-            <li>Improve logical thinking and problem-solving skills</li>
-            <li>Understand memory management</li>
-            <li>Learn data structures and algorithms effectively</li>
-            <li>Prepare for technical interviews</li>
-            <li>Develop high-performance software</li>
-        </ul>
-
-        <!-- ===== FEATURED IMAGES WITH AMAZON LINK ===== -->
-        <div class="featured-box">
-            <div class="featured-image">
-                <div class="image-group">
-                    <a href="https://www.amazon.com/dp/B0H8Q7Z71L" target="_blank" rel="noopener">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAA8zoksFxQUqLvlvjmIM3gc3eTRgsXyyrI8aTulN0T9DlJeAF5INRldTulwTtH3mFBvoU3gOSmsponPpNrGm3kgT7obRXBx4QQtywT_SrOqNN1LLrLCa3Gvh3nUwbbg83FsZxfC2TiOIJwW5JkSGg8K6bh7y_KRCUb2JLp0fq5cc04VC4pT5fyg_Iu9X0/s320/C.png" 
-                             alt="C and C++ Programming Book"/>
-                    </a>
-                    <span class="price-tag">💰 ₹300 Only</span>
-                    <a href="https://www.amazon.com/dp/B0H8Q7Z71L" target="_blank" rel="noopener">
-                      
-                    </a>
-                </div>
-            </div>
-            <div class="featured-cta">
-                <p>📚 <strong style="color:#00ff88;">Get Your Copy Today!</strong></p>
-                <a class="main-link" href="https://www.amazon.com/dp/B0H8Q7Z71L" target="_blank" rel="noopener">
-                    🛒 Buy Now on Amazon
-                </a>
-                <p class="small-note">Click on the book image or button above</p>
-            </div>
-        </div>
-
-        <hr/>
-
-        <!-- ===== WHAT YOU'LL LEARN ===== -->
-        <h2 id="learn">📖 What You'll Learn</h2>
-        <p>
-            This book is carefully designed for beginners while also serving as a valuable reference for students and professionals.
-        </p>
-        <p>
-            <strong>Inside the book, you'll discover:</strong>
-        </p>
-        <ul class="three-col-list">
-            <li>Introduction to C Programming</li>
-            <li>Variables and Data Types</li>
-            <li>Operators and Expressions</li>
-            <li>Conditional Statements</li>
-            <li>Loops and Iteration</li>
-            <li>Functions</li>
-            <li>Arrays and Strings</li>
-            <li>Pointers</li>
-            <li>Structures and Unions</li>
-            <li>File Handling</li>
-            <li>Dynamic Memory Allocation</li>
-            <li>Introduction to C++</li>
-            <li>Classes and Objects</li>
-            <li>Constructors and Destructors</li>
-            <li>Inheritance</li>
-            <li>Polymorphism</li>
-            <li>Encapsulation</li>
-            <li>Templates</li>
-            <li>Exception Handling</li>
-            <li>Standard Template Library (STL)</li>
-            <li>Practical Programming Examples</li>
-            <li>Mini Projects</li>
+            <li>Write and understand <strong>exploits</strong></li>
+            <li>Analyze <strong>malware</strong> at the byte level</li>
+            <li>Reverse engineer <strong>binaries</strong></li>
+            <li>Build <strong>high-performance</strong> security tools</li>
+            <li>Understand <strong>memory corruption</strong> vulnerabilities</li>
         </ul>
         <p>
-            Each chapter includes clear explanations, real-world examples, and hands-on coding exercises to reinforce learning.
+            The journey follows a clear path:
         </p>
-
-        <hr/>
-
-        <!-- ===== WHO IS THIS BOOK FOR ===== -->
-        <h2 id="who">🎯 Who Is This Book For?</h2>
-        <p>
-            <strong>This book is perfect for:</strong>
-        </p>
-        <ul class="two-col-list">
-            <li>Complete beginners with no programming experience</li>
-            <li>School and college students</li>
-            <li>Engineering students</li>
-            <li>Computer science learners</li>
-            <li>Self-taught programmers</li>
-            <li>Competitive programming enthusiasts</li>
-            <li>Job seekers preparing for coding interviews</li>
-            <li>Developers wanting to strengthen programming fundamentals</li>
-        </ul>
-
-        <hr/>
-
-        <!-- ===== WHY CHOOSE ===== -->
-        <h2 id="choose">🌟 Why Choose This Book?</h2>
-        <p>
-            Unlike many programming books that focus only on theory, this guide emphasizes practical learning. Every concept is explained using simple language and supported with easy-to-understand examples.
-        </p>
-        <p>
-            The book helps readers move step by step from basic syntax to advanced Object-Oriented Programming concepts without feeling overwhelmed.
-        </p>
-
-        <!-- ===== BOOK HIGHLIGHT ===== -->
-        <div class="book-highlight">
-            <p class="highlight-title">⭐ From Zero to C/C++ Hero</p>
-            <p style="color:#b0b8c8;">No prior programming experience required — Start from the basics and build real-world skills!</p>
+        <ol>
+            <li><strong>Learn C syntax</strong> — variables, control flow, functions, pointers.</li>
+            <li><strong>Master memory</strong> — malloc, free, stack vs heap, pointers.</li>
+            <li><strong>Understand the stack</strong> — how function calls work, return addresses.</li>
+            <li><strong>Learn gdb</strong> — debug binaries, inspect memory, set breakpoints.</li>
+            <li><strong>Practice exploitation</strong> — pwn.college, ROP Emporium, CTFs.</li>
+            <li><strong>Read real exploits</strong> — study CVEs and public PoCs.</li>
+        </ol>
+        <div class="callout">
+            <strong>🚀 Next Steps:</strong> Install <code>gcc</code> and <code>gdb</code> on Kali. Write a simple C program. Compile it, run it, then disassemble it. Then open gdb and inspect it. Within weeks, you'll understand exploitation at a level most hackers never reach.
         </div>
-
-        <hr/>
-
-        <!-- ===== BENEFITS ===== -->
-        <h2 id="benefits">🚀 Benefits of Learning C/C++</h2>
-        <p>
-            <strong>After completing this book, you'll be able to:</strong>
+        <p style="text-align:center; margin-top: 30px; font-size: 17px; color: #00ff88; font-weight: 600;">
+            Happy hacking — ethically. ⚙️
         </p>
-        <ul>
-            <li>Write efficient C and C++ programs</li>
-            <li>Build console-based applications</li>
-            <li>Understand how memory works</li>
-            <li>Solve programming challenges confidently</li>
-            <li>Learn advanced programming languages more easily</li>
-            <li>Prepare for academic exams and coding interviews</li>
-            <li>Build a strong foundation for software development</li>
-        </ul>
+    </section>
 
-        <hr/>
-
-        <!-- ===== START YOUR JOURNEY ===== -->
-        <h2 id="start">🔥 Start Your Programming Journey Today</h2>
-        <p>
-            Every expert programmer was once a beginner. The key is choosing the right learning resource and practicing consistently.
-        </p>
-        <p>
-            This C/C++ programming guide provides the knowledge, examples, and exercises you need to become a confident programmer. Whether you're learning for your career, education, or personal growth, this book is designed to help you succeed.
-        </p>
-
-        <!-- ===== FINAL CTA ===== -->
-        <div class="book-highlight" style="border-color:#ffcc00;background:linear-gradient(135deg,rgba(255,204,0,0.05),rgba(0,255,136,0.05));">
-            <p class="highlight-title" style="color:#ffcc00;">💻 Take the First Step Today!</p>
-            <p style="color:#b0b8c8;font-size:16px;">
-                Begin mastering one of the world's most powerful programming languages.
-            </p>
-            <br/>
-            <a class="main-link" href="https://www.amazon.com/dp/B0H8Q7Z71L" target="_blank" rel="noopener" 
-               style="display:inline-block;padding:15px 42px;background:linear-gradient(135deg,#ffcc00,#ff9900);color:#000000 !important;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;transition:all 0.3s ease;letter-spacing:0.5px;">
-                🛒 Buy Now on Amazon
-            </a>
-            <p class="small-note" style="color:#6a7290 !important;font-size:13px;margin-top:12px;">
-                Start your programming journey today — Get your copy now!
-            </p>
-        </div>
-
-        <p style="text-align:center;font-size:20px;color:#00ff88;font-weight:700;margin-top:20px;">
-            Happy Coding! 🚀
-        </p>
-
-        <hr/>
-
-        <!-- ===== SHARE SECTION ===== -->
-        <div class="share-section">
-            <p>📤 Share this book recommendation with your network</p>
-            <div class="share-buttons">
-                <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=Master%20C%20and%20C%2B%2B%20Programming%20-%20The%20Complete%20Guide%20for%20Beginners%20and%20Future%20Software%20Developers!%20%23CProgramming%20%23CPP%20%23LearnToCode','_blank');return false;">
-                    🐦 Twitter
-                </a>
-                <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    📘 Facebook
-                </a>
-                <a href="#" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    💼 LinkedIn
-                </a>
-            </div>
-        </div>
-
-    </div>
+    <!-- ===== FOOTER ===== -->
+    <footer class="page-footer">
+        <p>© 2025 · <span class="brand">⚡ cyber·sume</span> · C and C++ Programming</p>
+        <p style="margin-top: 8px; font-size: 12px;">Complete Guide · Beginner to Advanced · Updated 2025</p>
+    </footer>
 
 </div>
+
+</body>
+</html>
